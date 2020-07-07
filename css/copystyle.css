@@ -1,0 +1,84 @@
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Amita", cursive;
+}
+
+h2 {
+    color: #3046C5;
+}
+
+header h2 {
+    color: #CEC8FF;
+}
+
+.site-footer {
+    background-image: linear-gradient(#CEC8FF, white);
+    padding: 20px 0;
+}
+
+.jumbotron {
+    margin: 0;
+    padding: 30px;
+    background-image: linear-gradient(to right, #5637DD, #3046C5, #60106B);
+    color: white
+}
+
+.row-content {
+    padding: 50px 0;
+    border-bottom: 1px ridge;
+    min-height: 200px;
+}
+
+.navbar-dark {
+    background-color: #2a1cad;
+}
+
+.tab-content {
+    border: 1px solid  #DDD;
+    border-top: none;
+    padding: 10px;
+}
+
+.vertical .carousel-inner {
+    height: 100%;
+  }
+  
+  .carousel.vertical .carousel-item {
+     -webkit-transition: 0.9s ease-in-out top;
+     -moz-transition: 0.9s ease-in-out top;
+     -ms-transition: 0.6s ease-in-out top;
+     -o-transition: 0.6s ease-in-out top;
+     transition: 0.6s ease-in-out top;
+  }
+  
+  .carousel.vertical .active {
+     top: 0;
+  }
+  
+  .carousel.vertical .next {
+     top: 400px;
+  }
+  
+  .carousel.vertical .prev {
+     top: -400px;
+  }
+  
+  .carousel.vertical .next.left,
+  .carousel.vertical .prev.right {
+     top: 0;
+  }
+  
+  .carousel.vertical .active.left {
+     top: -400px;
+  }
+  
+  .carousel.vertical .active.right {
+     top: 400px;
+  }
+  
+  .carousel.vertical .carousel-item {
+     left: 0;
+  }

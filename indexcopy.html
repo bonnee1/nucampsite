@@ -12,15 +12,15 @@
     <!-- Additional CSS must be placed after Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Amita:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/copystyle.css" />
 
     <title>NuCamp: A Better Way To Camp</title>
 </head>
 
 <body>
-    <header class="jumbotron jumbotron-fluid">
-        <div class="container">
+    <header class="jumbotron">
+        <div class="container container-fluid">
             <div class="row">
                 <div class="col-4 col-sm-3 align-self-center">
                     <img src="img/logo.png" class="img-fluid" />
@@ -30,66 +30,12 @@
                     <h2>a better way to camp</h2>
                 </div>
                 <div class="col-md-4 col-xl-2 mt-4">
-                    <a role="button" class="btn btn-lg btn-info" data-toggle="modal" data-target="#reserveModal">Reserve Campsite</a>
+                    <a href="#reserveForm" role="button" class="btn btn-lg btn-info" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at <br /><strong>1-206-555-1234</strong>">Reserve Campsite</a>
                 </div>
             </div>
         </div>
     </header>
-    <div id="reserveModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-info text-white">
-                    <h3 class="modal-title">Reserve Campsite</h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <form id="reserveForm">
-                            <div class="form-group row">
-                                <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
-                                    <div class="col">
-                                    <select name="numCampers" id="numCampers" class="form-control">
-                                        <option selected>Select</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-6 col-form-label">Date</label>
-                                <div class="col">
-                                    <input class="form-control" type="date" id="date" name="date" placeholder="date"></input>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-6 col-form-label">Campsite Type</label>
-                                <div class="col">
-                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-success active">
-                                            <input type="radio" name="siteType" id="siteTent" autocomplete="off" checked> Tent
-                                        </label>
-                                        <label class="btn btn-primary">
-                                            <input type="radio" name="siteType" id="siteRV" autocomplete="off"> RV
-                                    </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col">
-                                    <a href="#" role="button" type="cancel" class="btn btn-secondary mt-4" data-dismiss="modal">Cancel</a>
-                                    <a href="#" role="button" type="submit" class="btn btn-primary mt-4">Search</a>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <nav class="navbar navbar-expand-sm navbar-dark navbar-sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="img/logo.png" 
@@ -148,15 +94,10 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row row-content">
-            <div class="col-md-8 mx-auto">
-                <div id="homeCarousel" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#homeCarousel" data-slide-to="1"></li>
-                        <li data-target="#homeCarousel" data-slide-to="2"></li>
-                    </ol>
+    <div class="container ma">
+        <div class="row-fluid">
+            <div class="col-6 mx-auto">
+                <div id="homeCarousel" class="carousel slide vertical" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img class="d-block w-100" src="img/breadcrumb-trail.jpg" alt="Breadcrumb Trail Campground" />
@@ -180,17 +121,12 @@
                             </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                    <a class="carousel-control left" href="#homeCarousel" data-slide="prev">‹</a>
+                    <a class="carousel-control right" href="#homeCarousel" data-slide="next">›</a>
                 </div>
             </div> 
         </div>
+    </div>
         <div class="row row-content align-items-center">
             <div class="col-sm-4 order-sm-last col-md-3">
                 <h2 class="text-sm-right"> Discover & Review</h2>
@@ -230,21 +166,22 @@
                 <div class="media">
                     <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png"
                     alt="Bootstrap Outfitters" />
-                    <div class="media-body align-self-center">
-                        <h3>Bootstrap Outfitters</h3>
-                        <p class="d-none d-sm-block">Bootstrap Outfitters supplies you gear you need 
-                        at prices you can't beat.</p>
-                    </div>
+                        <div class="media-body align-self-center">
+                            <h3>Bootstrap Outfitters</h3>
+                            <p class="d-none d-sm-block">Bootstrap Outfitters supplies you gear you need 
+                            at prices you can't beat.</p>
+                        </div>
                 </div>
             </div>
         </div>
+   
         <div class="row row-content align-self-center">
             <div class="col col-sm-6 mx-auto">
                 <div class="card">
                     <h3 class="card-header bg-info text-white"> Reserve a Campsite </h3>
                     <div class="card-body">
                         <form id="reserveForm">
-                            <div class="form-group row">
+                            <div class="form-group-row">
                                 <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
                                 <div class="col">
                                     <select name="numCampers" id="numCampers" class="form-control">
@@ -258,15 +195,14 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group row">
+                            <div class="form-group-row">
                                 <label class="col-sm-6 col-form-label">Date</label>
                                 <div class="col">
                                     <input class="form-control" type="date" id="date" name="date" placeholder="date"></input>
                                 </div>
                             </div>
-                            <div class="form-group row">
+                            <div class="form-group-row">
                                 <div class="col">
-                                    <a href="#" role="button" type="submit" class="btn btn-info mt-4">Cancel</a>
                                     <a href="#" role="button" type="submit" class="btn btn-primary mt-4">Search</a>
                                 </div>
                             </div>
@@ -310,6 +246,13 @@
         $('[data-toggle="tooltip"]').tooltip()
     })
     </script>
+    <script>
+        $(function () {
+        $('.carousel').carousel({
+        interval: 3000
+     })
+     </script>
+     
 </body>
 
 </html>
