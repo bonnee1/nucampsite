@@ -1,0 +1,71 @@
+$color-pale-white: #CEC8FF;
+$color-primary: #5637DD;
+$color-secondary: #3046C5;
+$color-dk-purple: #60106B;
+$color-lt-purple: #901CAD;
+$color-grey: #DDD;
+$color-gld-brwn: #563700;
+
+$body-font: "Open Sans", sans-serif;
+$header-font: "Lobster", cursive;
+
+
+
+body {
+    font-family: $body-font;
+}
+
+h1, h2, h3 {
+    font-family: $header-font;
+}
+
+h2 {
+    color: $color-secondary;
+}
+
+header {
+    h2 {
+    color: $color-pale-white;
+    }
+}
+
+.site-footer {
+    background-image: linear-gradient($color-pale-white, white);
+    padding: 20px 0;
+}
+
+.jumbotron {
+    margin: 0;
+    padding: 30px;
+    background-image: linear-gradient(to right,$color-primary, $color-secondary, $color-dk-purple);
+    color: white
+}
+
+.row-content {
+    padding: 50px 0;
+    border-bottom: 1px ridge;
+    min-height: 200px;
+}
+
+.navbar-dark {
+    background-color: $color-lt-purple;
+}
+
+.tab-content {
+    border: 1px solid  $color-grey;
+    border-top: none;
+    padding: 10px;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel {
+    border: solid $color-gld-brwn
+}
+#carouselButton {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
