@@ -2,9 +2,10 @@ $color-pale-white: #CEC8FF;
 $color-primary: #5637DD;
 $color-secondary: #3046C5;
 $color-dk-purple: #60106B;
-$color-lt-purple: #901CAD;
+$color-mid: #901CAD;
 $color-grey: #DDD;
 $color-gld-brwn: #563700;
+$color-teal: #17A2B8;
 
 $body-font: "Open Sans", sans-serif;
 $header-font: "Lobster", cursive;
@@ -48,13 +49,13 @@ header {
 }
 
 .navbar-dark {
-    background-color: $color-lt-purple;
+    background-color: $color-mid;
 }
 
-.tab-content {
-    border: 1px solid  $color-grey;
-    border-top: none;
-    padding: 10px;
+#carouselButton {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .carousel-caption {
@@ -64,8 +65,18 @@ header {
 .carousel {
     border: solid $color-gld-brwn
 }
-#carouselButton {
-    position: absolute;
-    right: 0;
-    bottom: 0;
+
+#reserveModal {
+    .modal-header {
+        background-color: $color-teal;
+        color: #ffffff;
+    }
 }
+
+#loginModal {
+    .modal-header {
+        background-color: $color-mid;
+        color: #ffffff;
+    }
+}
+
